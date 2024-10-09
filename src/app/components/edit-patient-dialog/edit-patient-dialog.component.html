@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Editar Paciente</h2>
+<form>
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="data.name" name="name" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Correo</mat-label>
+    <input matInput [(ngModel)]="data.email" name="email" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Teléfono</mat-label>
+    <input matInput [(ngModel)]="data.phone" name="phone" required>
+  </mat-form-field>
+
+  <div class="dialog-actions">
+    <button mat-button (click)="onCancel()">Cancelar</button>
+    <button mat-button color="primary" (click)="onSave()">Guardar</button>
+  </div>
+</form>

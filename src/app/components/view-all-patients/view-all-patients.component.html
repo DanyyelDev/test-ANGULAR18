@@ -1,0 +1,39 @@
+<div class="container">
+    <h2>Lista de los pacientes registrados</h2>
+    <ul class="responsive-table">
+        <li class="table-header">
+            <div class="col col-1">Id</div>
+            <div class="col col-2">Nombre completo</div>
+            <div class="col col-3">Correo</div>
+            <div class="col col-4">Telefono</div>
+        </li>
+        <!-- <li class="table-row">
+            <div class="col col-1" data-label="Job Id">42235</div>
+            <div class="col col-2" data-label="Customer Name">John Doe</div>
+            <div class="col col-3" data-label="Amount">$350</div>
+            <div class="col col-4" data-label="Payment Status">Pending</div>
+            <div class="col col-5" data-label="Delete">
+                <button mat-icon-button (click)="deleteItem(1)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </li> -->
+        <li *ngFor="let patient of patients" class="table-row">
+            <div class="col col-1" data-label="Id">{{ patient.id }}</div>
+            <div class="col col-2" data-label="Nombre">{{ patient.name }}</div>
+            <div class="col col-3" data-label="Correo">{{ patient.email }}</div>
+            <div class="col col-4" data-label="Telefono">{{ patient.phone }}</div>
+            <div class="col col-5" data-label="Delete">
+                <button class="btn btn-edit" mat-icon-button (click)="updatePatient(patient.id!)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button class="btn btn-delete" mat-icon-button (click)="deletePatient(patient.id!)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </li>
+    </ul>
+    <div class="button-container">
+        <button (click)="navigateToHome()" class="button-home">Inicio</button>
+    </div>
+</div>
