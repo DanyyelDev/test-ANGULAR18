@@ -1,0 +1,21 @@
+<div class="page">
+    <form class="form" (ngSubmit)="onSubmit()">
+        <p class="title">Registrar paciente </p>
+        <p class="message">Ingrese los datos solicitados a continuacion.</p>
+        <label>
+            <input required placeholder="" type="number" class="input" [(ngModel)]="newPatient.idDoctor" name="name">
+            <span>Id del doctor</span>
+        </label>
+
+        <label>
+            <input required placeholder="" type="text" class="input" [(ngModel)]="newPatient.name" name="email">
+            <span>Nombre</span>
+        </label>
+
+        <label>
+            <input required placeholder="" type="text" class="input" [(ngModel)]="newPatient.lastname" name="phone">
+            <span>Apellido</span>
+        </label>
+        <button type="submit" class="submit">Submit</button>
+    </form>
+</div>

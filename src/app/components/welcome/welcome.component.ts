@@ -20,6 +20,6 @@ export class WelcomeComponent {
   }
 
   navigateToContact() {
-    this.router.navigate(['contact']);
+    this.router.navigate(['clinic']);
   }
 }

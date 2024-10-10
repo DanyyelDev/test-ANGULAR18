@@ -1,0 +1,17 @@
+<div class="page">
+    <form class="form" (ngSubmit)="onSubmit()">
+        <p class="title">Registrar Clinica </p>
+        <p class="message">Ingrese los datos solicitados a continuacion.</p>
+
+        <label>
+            <input required placeholder="" type="text" class="input" [(ngModel)]="newClinic.name" name="name">
+            <span>Nombre de la clinica</span>
+        </label>
+
+        <label>
+            <input required placeholder="" type="text" class="input" [(ngModel)]="newClinic.address" name="address">
+            <span>Direccion</span>
+        </label>
+        <button type="submit" class="submit">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Lista de los doctores registrados</h2>
+    <ul class="responsive-table">
+        <li class="table-header">
+            <div class="col col-1">Id</div>
+            <div class="col col-2">Id Clinic</div>
+            <div class="col col-3">Nombre completo</div>
+            <div class="col col-4">Tipo de especialidad</div>
+        </li>
+
+        <li *ngFor="let doctor of doctors" class="table-row">
+            <div class="col col-1" data-label="Id">{{ doctor.id }}</div>
+            <div class="col col-2" data-label="IdClinic">{{ doctor.name }}</div>
+            <div class="col col-3" data-label="Nombre">{{ doctor.name  }} {{" "+doctor.lastname}}</div>
+            <div class="col col-4" data-label="specialistType">{{ doctor.specialistType }}</div>
+            <div class="col col-5" data-label="Delete">
+                <button class="btn btn-edit" mat-icon-button (click)="updateDoctor(doctor.id!)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button class="btn btn-delete" mat-icon-button (click)="deleteDoctor(doctor.id!)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </li>
+    </ul>
+    <div class="button-container">
+        <button (click)="navigateToHome()" class="button-home">Inicio</button>
+    </div>
+</div>
